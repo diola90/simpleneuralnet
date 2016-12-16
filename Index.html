@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head> 
+  <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+<script  type="text/javascript" src="synaptic.js"></script>
+<script type="text/javascript" src="underscore-min.js"></script>
+
+<script type="text/javascript">
+	var input = new synaptic.Layer(2); // Two inputs
+	var output = new synaptic.Layer(3); // Three outputs
+	input.project(output); // Connect input to output
+	
+	var trainingData = [
+		{input: [1, 0], output: [1, 0, 0]}, // Clap -> Sit
+		{input: [0, 1], output: [0, 1, 0]}, // Whistle -> Run
+		{input: [1, 1], output: [0, 0, 1]}, // Clap+Whistle -> Jump
+	];
+	
+	var learningRate = 0.4;
+	 
+	function train() {
+		for(var i = 0; i  < trainingData.length; i++) {
+			input.activate(trainingData[i]["input"]);
+			output.activate();
+			output.propagate(learningRate, trainingData[i]["output"]);
+		}
+	}
+	
+	function retrain() {
+		for(var i = 0; i < 1000; i++) {
+			trainingData = _.shuffle(trainingData); // underscore method
+			train();
+		}
+	}
+	 
+	retrain(); // Start the training
+	
+	input.activate([0,1]); // Whistle
+	var result = output.activate();
+
+	input.activate([1,0]); // Whistle
+	var result1 = output.activate();	
+
+	input.activate([1,1]); // Whistle
+	var result2 = output.activate();	
+	
+	$( document ).ready(function() {
+		var html = "<li>Sit Neuron: " + result[0] * 100 + "%"+"</li>"+
+		"<li>Run Neuron: " + result[1] * 100 + "%"+"</li>"+
+		"<li>Jump Neuron: " + result[2] * 100 + "%"+"</li>";		
+		
+		$("#resultdata").html(html);
+		
+		var html = "<li>Sit Neuron: " + result1[0] * 100 + "%"+"</li>"+
+		"<li>Run Neuron: " + result1[1] * 100 + "%"+"</li>"+
+		"<li>Jump Neuron: " + result1[2] * 100 + "%"+"</li>";		
+		
+		$("#resultdata1").html(html);		
+		
+		var html = "<li>Sit Neuron: " + result2[0] * 100 + "%"+"</li>"+
+		"<li>Run Neuron: " + result2[1] * 100 + "%"+"</li>"+
+		"<li>Jump Neuron: " + result2[2] * 100 + "%"+"</li>";		
+		
+		$("#resultdata2").html(html);			
+	});
+	
+		
+
+	
+</script>
+  <title>Synaptic Demo</title>
+</head>
+
+<body>
+	<a  target="_blank" href="http://progur.com/2016/09/how-to-create-and-use-neural-networks-in-javascript.html">how-to-create-and-use-neural-networks-in-javascript</a>
+	<br/>
+    <ul id="resultdata">
+		<li>test</li>
+	</ul>
+	<br/>
+    <ul id="resultdata1">
+		<li>test</li>
+	</ul>	
+	<br/>
+    <ul id="resultdata2">
+		<li>test</li>
+	</ul>		
+</body>
+</html>
