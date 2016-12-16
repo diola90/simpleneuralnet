@@ -1,0 +1,12 @@
+#slice-hide-button {
+ display:none;
+}
+
+.slice-container .slice-hide-button
+{
+ display:none;
+}
+
+#payplan-create-check{
+ display:none;
+}
