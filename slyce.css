@@ -2,6 +2,11 @@
  display:none;
 }
 
+.slice-container .slice-hide-button
+{
+ display:none;
+}
+
 #cardvault-inputs-amount {
  display:none;
 }
