@@ -10,3 +10,7 @@
 #payplan-create-check{
  display:none;
 }
+
+.history-list-container .app-refund {
+ display:none;
+}
