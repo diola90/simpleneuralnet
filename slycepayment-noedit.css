@@ -1,0 +1,35 @@
+#slice-hide-button {
+ display:none;
+}
+
+.slice-container .slice-hide-button
+{
+ display:none;
+}
+
+#payplan-create-check{
+ display:none;
+}
+
+.history-list-container .app-refund {
+display:none;
+}
+
+#refund-dollar,#refund-amount {
+display:none;
+}
+
+.card-info-group-CUamount,#cardvault-inputs-amount {
+display:none;
+}
+
+.input-group-addon  .input-group-addon-safari-fix{
+display:none;
+}
+
+#refund-word .btn-default {
+left:50px;
+}
+
+
+

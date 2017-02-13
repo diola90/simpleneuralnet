@@ -14,22 +14,3 @@
 .history-list-container .app-refund {
 display:none;
 }
-
-#refund-dollar,#refund-amount {
-display:none;
-}
-
-.card-info-group-CUamount,#cardvault-inputs-amount {
-display:none;
-}
-
-.input-group-addon  .input-group-addon-safari-fix{
-display:none;
-}
-
-#refund-word .btn-default {
-left:50px;
-}
-
-
-
