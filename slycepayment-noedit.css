@@ -36,5 +36,11 @@ display:none;
 left:50px;
 }
 
+#refund-word button.btn-default
+{
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    left: 6px;
+}
 
 
