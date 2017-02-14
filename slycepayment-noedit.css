@@ -28,6 +28,8 @@ display:none;
 display:none;
 }
 
+.input-group { display:none; }
+
 .input-group-addon  .input-group-addon-safari-fix{
 display:none;
 }
@@ -42,5 +44,3 @@ left:50px;
     border-top-left-radius: 3px;
     left: 6px;
 }
-
-
