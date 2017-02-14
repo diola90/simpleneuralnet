@@ -12,6 +12,8 @@ overflow:hidden;
  display:none;
 }
 
+#cardvault-inputs .input-group {display:none;}
+
 #payplan-create-check{
  display:none;
 }
