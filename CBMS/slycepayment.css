@@ -1,0 +1,27 @@
+#main-wrapper
+{
+overflow:hidden;
+}
+
+#slice-hide-button {
+ display:none;
+}
+.slice-container .slice-hide-button
+{
+ display:none;
+}
+
+#payplan-create-check{
+ visibility:hidden;
+}
+
+.history-list-container .app-refund {
+display:none;
+}
+
+.divider {
+display: none;
+}
+.receipt-print { display: none; }
+
+.receipt-or { display: none; }
