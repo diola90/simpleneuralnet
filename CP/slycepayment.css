@@ -22,3 +22,6 @@ display:none;
 #cardIcons { display: none; }
 .divider { display:none; }
 .receipt-print { display: none; }
+
+#app-header{ display:none; }
+#app-body { background-color : none;}
