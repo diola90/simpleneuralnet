@@ -24,4 +24,5 @@ display:none;
 .receipt-print { display: none; }
 
 #app-header{ display:none; }
-#app-body { background-color : none;}
+#app-body { background-color: #fff;}
+#slice-container { box-shadow: none; }
