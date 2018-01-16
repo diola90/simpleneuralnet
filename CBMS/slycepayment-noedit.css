@@ -48,4 +48,14 @@ display: none;
 }
 .receipt-print { display: none; }
 .receipt-print.form-group.pull-left { display:block; }
-.receipt-or { display: none; }
+.receipt-or {
+    display: none !important;
+}
+
+.app-refund .app-receipt-options {
+    display: none;
+}
+
+.slice-container {
+    width: 380px;
+}
