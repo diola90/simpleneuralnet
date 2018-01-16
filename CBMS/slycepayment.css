@@ -25,3 +25,5 @@ display: none;
 .receipt-print { display: none; }
 
 .receipt-or { display: none; }
+
+.receipt-print.form-group.pull-left { display:block; }
