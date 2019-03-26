@@ -39,12 +39,17 @@ left:50px;
 
 .divider { display:none; }
 .receipt-print { display: none; }
+.receipt-print.form-group.pull-left { display:block; }
 .input-group { display:none; }
-#cardIcons { display: none; }
+#cardIcons { display: inline-block !important; }
 
 #refund-word button.btn-default
 {
     border-bottom-left-radius: 3px;
     border-top-left-radius: 3px;
     left: 6px;
+}
+
+.card-info-group-remember {
+    display: none;
 }
